@@ -18,11 +18,12 @@ export class ButtonCreateTimeLine extends SpinalContextApp {
   }
   
   isShown() {
-    return Promise.resolve( true );
+    if (typeof SpinalGraphService.getContext( "Timeline" ) !== "undefined")
+      return Promise.resolve( true );
+    return Promise.resolve(-1);
   }
   
   openPanel() {
     SpinalGraphService.addContext("Timeline", "Timeline");
-    spinalPanelManagerService.openPanel( "DialogCreateTimeLine");
   }
 }

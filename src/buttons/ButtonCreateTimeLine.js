@@ -18,7 +18,7 @@ export class ButtonCreateTimeLine extends SpinalContextApp {
   }
   
   isShown() {
-    if (typeof SpinalGraphService.getContext( "Timeline" ) !== "undefined")
+    if (typeof SpinalGraphService.getContext( "Timeline" ) === "undefined")
       return Promise.resolve( true );
     return Promise.resolve(-1);
   }

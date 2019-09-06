@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 
-Vue.use(Vuetify);
+Vue.use( Vuetify );
 
 import {
   SpinalMountExtention
@@ -15,13 +15,11 @@ import { ButtonsEditTimeLIne } from "./buttons/ButtonsEditTimeLIne";
 import DialogEditTimeLine from "./vue/DialogEditTimeLine.vue";
 
 
-
- const TOP_BAR_HOOK_NAME = 'GraphManagerTopBar';
- const SIDE_BAR_HOOK_NAME = "GraphManagerSideBar";
+const TOP_BAR_HOOK_NAME = 'GraphManagerTopBar';
+const SIDE_BAR_HOOK_NAME = "GraphManagerSideBar";
 
 spinalContextMenuService.registerApp( TOP_BAR_HOOK_NAME, new ButtonCreateTimeLine(), [7] );
 spinalContextMenuService.registerApp( SIDE_BAR_HOOK_NAME, new ButtonsEditTimeLIne(), [7] );
-
 
 
 SpinalMountExtention.mount( {

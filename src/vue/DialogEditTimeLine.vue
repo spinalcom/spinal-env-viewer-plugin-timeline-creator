@@ -54,7 +54,6 @@
     },
     methods: {
       opened: function ( option ) {
-        console.log("opene timeLine", option)
         if (option.hasOwnProperty( "timeline" ))
           this.timeLine = option.timeline;
 
@@ -71,6 +70,8 @@
         if (this.attrName !== this.timeLineAttr)
           info['attrName'] = this.timeLineAttr;
         SpinalGraphService.modifyNode( this.timeLine.info.id.get(), info );
+
+
         this.open = false;
       },
       onClose: function () {
